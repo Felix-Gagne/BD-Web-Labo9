@@ -1,0 +1,59 @@
+Mettez ceci dans votre Vue Razor Index.cshtml pour accéder facilement aux 6 nouvelles vues :
+
+<p>
+    <a asp-action="Query1">Employés embauchés en 2023</a>
+</p>
+<p>
+    <a asp-action="Query2">Modélisateurs 3D</a>
+</p>
+<p>
+    <a asp-action="Query3">Noms des employés</a>
+</p>
+<p>
+    <a asp-action="Query4">Toutes les données des employés</a>
+</p>
+<p>
+    <a asp-action="Query5">Nombre d'employés par spécialité</a>
+</p>
+<p>
+    <a asp-action="Query6">Deux spécialités avec des longs prénoms</a>
+</p>
+
+
+public async Task<IActionResult> Query1()
+{
+    // Données des employés embauchés en 2023 (Utilisez VwListeArtiste)
+	// IEnumerable<VwListeArtiste> artistes = await _context.VwListeArtistes. ..instruction(s) LINQ.. .ToListAsync();
+
+    // N'oubliez pas d'envoyer artistes à la vue Razor ! 
+	return View();
+}
+
+public async Task<IActionResult> Query2()
+{
+    // Données des employés avec la spécialité "modélisation 3D" (Utilisez VwListeArtiste)
+
+    return View();
+}
+
+public async Task<IActionResult> Query3()
+{
+    // Prénom et nom de tous les employés, classés par prénom ascendant
+	// Concaténez prénoms et noms (avec une espace au centre) pour simplement obtenir une liste de strings.
+
+    return View();
+}
+
+public async Task<IActionResult> Query4()
+{
+    // Toutes les données des employés artistes (Sans VwListeArtiste)
+
+    return View();
+}
+
+public async Task<IActionResult> Query5()
+{
+    // Combien d'artistes par spécialité ?
+
+    return View();
+}

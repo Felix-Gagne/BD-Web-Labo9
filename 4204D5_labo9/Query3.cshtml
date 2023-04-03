@@ -1,0 +1,30 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Query 3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Noms des employés</h1>
+
+<p>
+    <a asp-action="Index">Index</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nom
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

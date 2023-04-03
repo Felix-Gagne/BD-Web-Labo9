@@ -1,0 +1,60 @@
+﻿@model IEnumerable<_4204D5_labo9_mvc.ViewModels.ArtisteEmployeViewModel>
+
+@{
+    ViewData["Title"] = "Query 4";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Toutes les données des employés</h1>
+
+<p>
+    <a asp-action="Index">Index</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Artiste.Specialite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe.NoTel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe.Courriel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe.DateEmbauche)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artiste.Specialite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employe.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employe.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employe.NoTel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employe.Courriel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employe.DateEmbauche)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

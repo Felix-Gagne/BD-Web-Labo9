@@ -1,0 +1,36 @@
+﻿@model IEnumerable<_4204D5_labo9_mvc.ViewModels.NbSpecialiteViewModel>
+
+@{
+    ViewData["Title"] = "Query 4";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Nombre d'employés par spécialité</h1>
+
+<p>
+    <a asp-action="Index">Index</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Specialite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nb)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nb)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
